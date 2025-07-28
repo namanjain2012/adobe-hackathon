@@ -1,81 +1,82 @@
-PDF Outline Extractor
-=====================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PDF Outline Extractor</title>
+  <style>
+    body { font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; max-width: 900px; margin: auto; background-color: #f9f9f9; }
+    h1, h2, h3 { color: #2c3e50; }
+    pre { background: #f4f4f4; padding: 12px; border-left: 4px solid #ccc; overflow-x: auto; }
+    code { background: #eee; padding: 2px 4px; font-family: monospace; }
+    ul { padding-left: 20px; }
+    a { color: #2980b9; text-decoration: none; }
+  </style>
+</head>
+<body>
 
-This Python script extracts the Title and hierarchical Headings (H1, H2, H3) from PDF files and saves the results in a structured JSON format.
+  <h1>🧠 PDF Outline Extractor</h1>
+  <p>This Python script extracts the <strong>Title</strong> and hierarchical <strong>Headings (H1, H2, H3)</strong> from PDF files and saves the results in a structured JSON format.</p>
 
------------------------
-📁 Project Structure:
------------------------
-
+  <h2>📁 Directory Structure</h2>
+  <pre>
 pdf_outline_extractor/
-├── main.py               -> Main script
-├── requirements.txt      -> Python dependencies
-├── input/                -> Place your PDF files here
+├── main.py               # Main script
+├── requirements.txt      # Python dependencies
+├── input/                # Place your PDF files here
 │   └── sample.pdf
-├── output/               -> JSON results will be saved here
+├── output/               # JSON output will be saved here
+  </pre>
 
------------------------
-🚀 How to Run:
------------------------
+  <h2>🚀 How to Run (Locally)</h2>
 
-1. Install Python (version 3.7 or higher)
+  <h3>1. ✅ Install Python</h3>
+  <p>Ensure you have <strong>Python 3.7+</strong> installed.</p>
 
-2. Install required dependencies:
-   pip install -r requirements.txt
+  <h3>2. 📦 Install Required Dependencies</h3>
+  <pre><code>pip install -r requirements.txt</code></pre>
 
-3. Add your PDF(s) to the `input/` folder (up to 50 pages).
+  <h3>3. 📂 Add PDF Files</h3>
+  <p>Place your PDF files (up to 50 pages) inside the <code>input/</code> folder.</p>
 
-4. Run the script:
-   python main.py
+  <h3>4. 🏃 Run the Script</h3>
+  <pre><code>python main.py</code></pre>
 
------------------------
-📤 Output Format:
------------------------
+  <h2>📤 Output Format</h2>
+  <p>Each PDF in <code>input/</code> generates a <code>.json</code> file in the <code>output/</code> folder.</p>
 
-For each PDF in `input/`, the script will create a `.json` file in the `output/` folder.
-
-Example output:
-
-{
+  <h3>✅ Sample Output</h3>
+  <pre><code>{
   "title": "Understanding AI",
   "outline": [
     { "level": "H1", "text": "Introduction", "page": 1 },
     { "level": "H2", "text": "Applications", "page": 2 },
     { "level": "H3", "text": "AI in Healthcare", "page": 3 }
   ]
-}
+}</code></pre>
 
------------------------
-✅ Features:
------------------------
+  <h2>📌 Features</h2>
+  <ul>
+    <li>✅ Supports PDFs up to 50 pages</li>
+    <li>✅ Automatically detects Title and Headings based on font size</li>
+    <li>✅ Outputs clean and structured JSON</li>
+    <li>❌ No OCR support (text-based PDFs only)</li>
+    <li>❌ No paragraph, list, or table extraction</li>
+  </ul>
 
-- Supports PDF files with up to 50 pages
-- Automatically detects Title and Headings based on font size
-- Outputs a clean and structured JSON
-- Works offline (no internet required)
+  <h2>🔧 Customization Tips</h2>
+  <ul>
+    <li>Adjust font-size thresholds to refine H1, H2, H3 detection</li>
+    <li>Add regex or rules for filtering non-heading text</li>
+    <li>Use <code>pytesseract</code> for OCR if supporting scanned PDFs</li>
+  </ul>
 
-Limitations:
-- Does not support image-based PDFs (no OCR)
-- Does not extract paragraphs, lists, or tables
+  <h2>🛠 Requirements</h2>
+  <ul>
+    <li>Python 3.7 or above</li>
+    <li><a href="https://github.com/jsvine/pdfplumber" target="_blank">pdfplumber</a></li>
+  </ul>
+  <pre><code>pip install -r requirements.txt</code></pre>
 
------------------------
-🛠 Requirements:
------------------------
-
-- Python 3.7+
-- pdfplumber
-
-Install with:
-pip install -r requirements.txt
-
------------------------
-📬 Support:
------------------------
-
-If you have any questions or issues, feel free to reach out at your.email@example.com
-
------------------------
-License:
------------------------
-
-This project is open-source and free to use under the MIT License.
+</body>
+</html>

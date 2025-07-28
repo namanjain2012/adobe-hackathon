@@ -3,15 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>PDF Outline Extractor</title>
-  <style>
-    body { font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; max-width: 900px; margin: auto; background-color: #f9f9f9; }
-    h1, h2, h3 { color: #2c3e50; }
-    pre { background: #f4f4f4; padding: 12px; border-left: 4px solid #ccc; overflow-x: auto; }
-    code { background: #eee; padding: 2px 4px; font-family: monospace; }
-    ul { padding-left: 20px; }
-    a { color: #2980b9; text-decoration: none; }
-  </style>
 </head>
 <body>
 
